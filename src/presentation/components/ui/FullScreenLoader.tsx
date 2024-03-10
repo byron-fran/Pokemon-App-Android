@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native'
 import ImageColors from 'react-native-image-colors'
-import {ActivityIndicator, useTheme} from 'react-native-paper'
+import {ActivityIndicator, useTheme} from 'react-native-paper';
+
 const FullScreenLoader = () => {
 
     const {colors} = useTheme()
