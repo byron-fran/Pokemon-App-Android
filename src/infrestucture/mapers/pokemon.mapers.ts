@@ -13,7 +13,11 @@ export class PokemonMapper {
       avatar: avatar,
       types: data.types.map(type => type.type.name),
       sprites: sprites,
-      color
+      color,
+      abilities : data.abilities.map(a => a.ability.name),
+      games : data.game_indices.map(g => g.version.name),
+      moves : data.moves.map(m => ({name : m.move.name, level : 0})),
+      stats : data.stats.map(s => ({name : s.stat.name, value : s.base_stat})),
     };
   }
 

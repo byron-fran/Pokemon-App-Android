@@ -4,7 +4,7 @@ import { PokemonDetail } from "../../infrestucture/interfaces/PokeApi"
 import { PokemoResultResponse } from "../../infrestucture/interfaces/PokeApi";
 import { PokemonMapper } from "../../infrestucture/mapers/pokemon.mapers";
 
-export const getPokemos = async(page : number, limit : number) : Promise<Pokemon[]>=> {
+export const getPokemos = async(page : number, limit : number = 20) : Promise<Pokemon[]>=> {
     try {
         const {data} = await pokeApi<PokemoResultResponse>(`/pokemon?offset=${page * 10}&limit=${limit}`)
 

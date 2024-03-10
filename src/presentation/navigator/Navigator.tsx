@@ -3,8 +3,15 @@ import HomeScreen from '../screens/home/HomeScreen'
 import SearchScreen from '../screens/search/SearchScreen'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import PokemonScreen from '../screens/pokemon/PokemonScreen'
+import { Pokemon } from '../../infrestucture/interfaces/Pokemon'
 
-const Stack = createNativeStackNavigator()
+export type RootStackParams  = {
+    HomeScreen : undefined,
+    SearchScreen : undefined,
+    PokemonScreen : {id : string}
+}
+const Stack = createNativeStackNavigator<RootStackParams>();
+
 const Navigator = () => {
 
     return (
